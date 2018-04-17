@@ -173,22 +173,12 @@ $mail.body = $BodyText
 $mail.Attachments.add($Attachment)
 $mail.Send()
 
+#TEST
+
 #$inspector = $mail.getinspector
 #$inspector.activate()
 
 
-
-<# TEST
-$SendTo = "louis.crawley@tracesolutions.co.uk"
-
-$Msg = "Good $time," + "`r`n" + "`r`n" + "Please find attached a current list of Inactive AD users on the " + "'" + "$DOMAIN" + "'" + " domain, and their respective Office365 licences." + "`r`n" + "`r`n" + "Kind Regards," + "`r`n" + "`r`n" + "Technical Services Team" + "`r`n" + "Trace Solutions - Part of Trace Group"
-
-$EmailFrom = "$365user"
-$Subject = "Current Inactive Users - $domain"
-$smtpserver = "$365User"
-$smtp = new-object net.mail.smtpclient($smtpserver)
-$smtp.send($emailfrom, $sendto, $Subject, $Msg)
-#>
 
 <#
 write-host $365user
