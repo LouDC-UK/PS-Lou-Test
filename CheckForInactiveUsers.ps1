@@ -33,7 +33,6 @@ $DOMAIN = get-content C:\InactiveUsers\References\1\DOMAIN.txt
 #Create O365Credentials From Refs and store in $365Credentials variable as PSCredential
 $365User = get-content C:\InactiveUsers\References\3\1\Cred1.txt
 $365Pass = get-content C:\InactiveUsers\References\3\2\Cred2.txt
-#$365Pass = "Puga9131"
 $365Pass = ConvertTo-SecureString "$365Pass" -AsPlainText -force
 $365Credentials = New-Object system.management.automation.pscredential($365User,$365Pass)
 
@@ -136,7 +135,6 @@ $ExportingItems | export-csv "C:\InactiveUsers\Exports\Inactive_Users_$dt.csv" -
 
 ################ TEST #####################
 
-#$Mailbox = get-mailbox -Identity 'Louis Crawley' | out-string
 #write-host $Mailbox -ForegroundColor Cyan
 
 #$Test = $Mailbox.name
